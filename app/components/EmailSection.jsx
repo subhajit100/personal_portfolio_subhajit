@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import GithubIcon from "../../public/github-icon.svg";
 import LinkedinIcon from "../../public/linkedin-icon.svg";
 import TwitterIcon from "../../public/twitter-icon.svg";
@@ -8,13 +8,16 @@ import Image from "next/image";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [loadingStatus, setLoadingStatus] = useState(false);
+  const formRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoadingStatus(true);
     const data = {
-      email: e.target.email.value,
+      to: e.target.email.value,
       subject: e.target.subject.value,
-      message: e.target.message.value,
+      text: e.target.message.value,
     };
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
@@ -43,6 +46,8 @@ const EmailSection = () => {
     } else {
       setEmailSubmitted(false);
     }
+    formRef.current.reset();
+    setLoadingStatus(false);
   };
 
   return (
@@ -77,7 +82,7 @@ const EmailSection = () => {
         </div>
       </div>
       <div>
-        <form className="flex flex-col" onSubmit={handleSubmit}>
+        <form className="flex flex-col" onSubmit={handleSubmit} ref={formRef}>
           <div className="mb-6">
             <label
               htmlFor="email"
@@ -126,7 +131,10 @@ const EmailSection = () => {
           </div>
           <button
             type="submit"
-            className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+            disabled={loadingStatus}
+            className={`bg-primary-500 ${
+              !loadingStatus ? "hover:bg-primary-600" : ""
+            } text-white font-medium py-2.5 px-5 rounded-lg w-full`}
           >
             Send Message
           </button>
