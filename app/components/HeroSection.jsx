@@ -23,7 +23,7 @@ const HeroSection = () => {
             <div className="sm:h-72 h-36 mt-3 sm:mt-6">
             <TypeAnimation
               sequence={[
-                "Subhajit",
+                "Subhajit Adhikary",
                 1000,
                 "Web Developer",
                 1000,
