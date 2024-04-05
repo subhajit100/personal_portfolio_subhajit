@@ -39,11 +39,16 @@ const EmailSection = () => {
 
     const response = await fetch(endpoint, options);
     const resData = await response.json();
+    console.log("resData ", resData);
 
     if (response.status === 200) {
       console.log("Message sent.");
       //   console.log(resData);
       setEmailSubmitted(true);
+      // remove the email success message after 2 seconds
+      setTimeout(() => {
+        setEmailSubmitted(false);
+      }, 2000);
     } else {
       setEmailSubmitted(false);
     }
@@ -80,8 +85,12 @@ const EmailSection = () => {
           <Link href="https://twitter.com/Subhajit__1999" target="_blank">
             <Image src={TwitterIcon} alt="Twitter Icon" />
           </Link>
-          <Link href="https://www.facebook.com/webdevsubhajit" target="_blank" style={{marginLeft: '5px'}}>
-            <Image src={MetaIcon} alt="Meta Icon"/>
+          <Link
+            href="https://www.facebook.com/webdevsubhajit"
+            target="_blank"
+            style={{ marginLeft: "5px" }}
+          >
+            <Image src={MetaIcon} alt="Meta Icon" />
           </Link>
         </div>
       </div>
@@ -137,7 +146,7 @@ const EmailSection = () => {
             type="submit"
             disabled={loadingStatus}
             className={`bg-primary-500 ${
-              !loadingStatus ? "hover:bg-primary-600" : ""
+              !loadingStatus ? "hover:bg-primary-600" : "bg-primary-400"
             } text-white font-medium py-2.5 px-5 rounded-lg w-full`}
           >
             Send Message
