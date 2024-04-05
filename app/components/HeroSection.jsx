@@ -49,7 +49,7 @@ const HeroSection = () => {
               Hire Me
             </Link>
             <Link
-              href="https://drive.google.com/file/d/1DlQmSDjswb2w0_Z7hd48L9VWt9Mud80b/view"
+              href="https://drive.google.com/file/d/1pb0s3bXqN8qjIi-o8pthZEO1NjYEfRZH/view"
               target="_blank"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
@@ -67,7 +67,7 @@ const HeroSection = () => {
         >
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative my-2">
             <Image
-              src="/images/hero-image.png"
+              src="/images/profile_pic_portfolio.png"
               alt="hero image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full"
               width={300}
