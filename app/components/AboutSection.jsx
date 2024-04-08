@@ -4,58 +4,75 @@ import Image from "next/image";
 import TabButton from "./TabButton";
 import Link from "next/link";
 
+const skillsList = [
+  "React.js",
+  "Next.js",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "Javascript",
+  "HTML",
+  "CSS",
+  "Github",
+  "MySQL",
+  "Jest",
+  "React Testing Library",
+];
+
+const certificateList = [
+  {
+    url: "https://cutshort.io/certificate/90327",
+    name: "Javascript-Advanced",
+  },
+  {
+    url: "https://cutshort.io/certificate/90351",
+    name: "React-Certified",
+  },
+  {
+    url: "https://cutshort.io/certificate/90053",
+    name: "HTML/CSS Certified",
+  },
+  {
+    url: "https://cutshort.io/certificate/90046",
+    name: "React Native Certified",
+  },
+];
+
 const TAB_DATA = [
   {
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2">
-        <li>React</li>
-        <li>Next.js</li>
-        <li>Node.js</li>
-        <li>Express.js</li>
-        <li>MongoDB</li>
-        <li>JavaScript</li>
-        <li>Jest</li>
-      </ul>
+      <>
+        {skillsList.map((skill) => (
+          <li key={skill}>{skill}</li>
+        ))}
+      </>
     ),
   },
   {
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-2">
+      <>
         <li>KV IMA (Science)</li>
         <li>RV College of Engineering, BTech</li>
-      </ul>
+      </>
     ),
   },
   {
     title: "Certifications",
     id: "certifications",
     content: (
-      <ul className="list-disc pl-2">
-        <Link href={`https://cutshort.io/certificate/90327`} target="_blank">
-          <li className="hover:scale-y-110 hover:text-secondary-300">
-            Javascript-Advanced
-          </li>
-        </Link>
-        <Link href={`https://cutshort.io/certificate/90351`} target="_blank">
-          <li className="hover:scale-y-110 hover:text-secondary-300">
-            React Certified
-          </li>
-        </Link>
-        <Link href={`https://cutshort.io/certificate/90046`} target="_blank">
-          <li className="hover:scale-y-110 hover:text-secondary-300">
-            React Native Certified
-          </li>
-        </Link>
-        <Link href={`https://cutshort.io/certificate/90053`} target="_blank">
-          <li className="hover:scale-y-110 hover:text-secondary-300">
-            HTML/CSS Certified
-          </li>
-        </Link>
-      </ul>
+      <>
+        {certificateList.map((certificate) => (
+          <Link key={certificate.url} href={certificate.url} target="_blank">
+            <li className="hover:scale-y-110 hover:text-secondary-300">
+              {certificate.name}
+            </li>
+          </Link>
+        ))}
+      </>
     ),
   },
 ];
@@ -73,7 +90,12 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} alt="about_image"/>
+        <Image
+          src="/images/about-image.png"
+          width={500}
+          height={500}
+          alt="about_image"
+        />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
@@ -108,7 +130,9 @@ const AboutSection = () => {
             </TabButton>
           </div>
           <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
+            <ul className="list-disc pl-2 grid grid-cols-3 gap-x-1 gap-y-2">
+                {TAB_DATA.find((t) => t.id === tab).content}
+            </ul>
           </div>
         </div>
       </div>
