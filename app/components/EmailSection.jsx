@@ -4,6 +4,7 @@ import GithubIcon from "../../public/github-icon.svg";
 import LinkedinIcon from "../../public/linkedin-icon.svg";
 import TwitterIcon from "../../public/twitter-icon.svg";
 import YoutubeIcon from "../../public/youtube-icon.svg";
+import InstagramIcon from '../../public/instagram-icon.svg';
 import MetaIcon from "../../public/meta-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
@@ -95,6 +96,9 @@ const EmailSection = () => {
             style={{ marginLeft: "8px" }}
           >
             <Image src={MetaIcon} alt="Meta Icon" />
+          </Link>
+          <Link href="https://www.instagram.com/webdevsubhajit/" target="_blank" style={{marginTop: "5px", marginLeft: "8px"}}>
+            <Image src={InstagramIcon} alt="Instagram Icon" />
           </Link>
         </div>
       </div>
