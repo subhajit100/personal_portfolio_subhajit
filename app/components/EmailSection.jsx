@@ -84,10 +84,10 @@ const EmailSection = () => {
           >
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
-          <Link href="https://twitter.com/Subhajit__1999" target="_blank">
+          <Link href="https://x.com/CodeWidSubhajit" target="_blank">
             <Image src={TwitterIcon} alt="Twitter Icon" />
           </Link>
-          <Link href="https://www.youtube.com/@subhajitadhikary-99" target="_blank" style={{marginTop: "5px", marginLeft: "8px"}}>
+          <Link href="https://www.youtube.com/@codewithsubhajit-real/videos" target="_blank" style={{marginTop: "5px", marginLeft: "8px"}}>
             <Image src={YoutubeIcon} alt="Youtube Icon" />
           </Link>
           <Link

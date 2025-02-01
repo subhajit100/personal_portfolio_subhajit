@@ -7,6 +7,16 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
+    title: "Django Todo App",
+    description:
+      "Full end to end todo app with React frotend and Python (Django) backend. Used cookie based JWT authentication. Used dockerization for deployment",
+    image: "/images/projects/todo_list_app.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/subhajit100/todo-app-django-react",
+    previewUrl: "https://django-todo-project-latest.onrender.com",
+  },
+  {
+    id: 2,
     title: "ECommerce Web App",
     description:
       "Full end to end project including Frontend using ReactJs and Backend using NodeJs(ExpressJs), MongoDB(Mongoose).",

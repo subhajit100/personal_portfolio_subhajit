@@ -25,9 +25,11 @@ const HeroSection = () => {
               sequence={[
                 "Subhajit Adhikary",
                 1000,
-                "Web Developer",
-                1000,
                 "Full Stack Developer",
+                1000,
+                "NodeJs Developer",
+                1000,
+                "Python Django Developer",
                 1000,
                 "MERN Stack Developer",
                 1000,
