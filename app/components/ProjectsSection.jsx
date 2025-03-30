@@ -6,17 +6,15 @@ import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
-    id: 1,
-    title: "Django Todo App",
+    title: "Job Portal System",
     description:
-      "Full end to end todo app with React frotend and Python (Django) backend. Used cookie based JWT authentication. Used dockerization for deployment",
-    image: "/images/projects/todo_list_app.jpg",
+      "A Job Portal backend API which connects job seekers and employers with Java Spring boot. Applied bearer token with role based JWT authentication using Spring security. Used MySQL as the DB with JPA as ORM. Tested out the application with Mockito and Spring testing",
+    image: "/images/projects/job_portal.jpg",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/subhajit100/todo-app-django-react",
-    previewUrl: "https://django-todo-project-latest.onrender.com",
+    gitUrl: "https://github.com/subhajit100/job-portal-api-java-springboot",
+    previewUrl: "",
   },
   {
-    id: 2,
     title: "ECommerce Web App",
     description:
       "Full end to end project including Frontend using ReactJs and Backend using NodeJs(ExpressJs), MongoDB(Mongoose).",
@@ -26,7 +24,6 @@ const projectsData = [
     previewUrl: "https://mern-ecommerce-rmp1z8ia6-subhajit100.vercel.app/",
   },
   {
-    id: 2,
     title: "Restaurant Website",
     description:
       "Dynamic UI for a aesthetic restaurant website, fully responsive for all devices using React.js",
@@ -36,7 +33,6 @@ const projectsData = [
     previewUrl: "https://restaurant-website-five-rho.vercel.app/",
   },
   {
-    id: 3,
     title: "Pet Grooming Website",
     description:
       "Dynamic UI for a aesthetic pet grooming website, fully responsive for all devices using React.js",
@@ -46,7 +42,6 @@ const projectsData = [
     previewUrl: "https://pet-grooming-website.vercel.app/",
   },
   {
-    id: 4,
     title: "Stock Manangement App",
     description:
       "Full end to end project using NextJs and MongoDB(Mongoose) for database.",
@@ -56,7 +51,15 @@ const projectsData = [
     previewUrl: "https://stock-management-inky.vercel.app/",
   },
   {
-    id: 5,
+    title: "Django Todo App",
+    description:
+      "Full end to end todo app with React frotend and Python (Django) backend. Used cookie based JWT authentication. Used dockerization for deployment",
+    image: "/images/projects/todo_list_app.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/subhajit100/todo-app-django-react",
+    previewUrl: "https://django-todo-project-latest.onrender.com",
+  },
+  {
     title: "AI-Saas Tool",
     description:
       "This AI Saas Tool provides 5 different day to day AI Services using Chatgpt API's to make your daily life easy.",
@@ -66,7 +69,6 @@ const projectsData = [
     previewUrl: "https://ai-saas-tool.vercel.app/",
   },
   {
-    id: 6,
     title: "Promptify Prompt Sharing Library",
     description:
       "You can share your awesome AI prompts here, it will help the community to learn and you can get recognition for the great work you are doing.",
@@ -76,7 +78,6 @@ const projectsData = [
     previewUrl: "https://promptify-prompt-library.vercel.app/",
   },
   {
-    id: 7,
     title: "Netflix clone (Watchofy)",
     description:
       "Used NextJs App Based Router for frontend and API routes. Very similar to real Netflix.",
@@ -86,7 +87,6 @@ const projectsData = [
     previewUrl: "https://watchofy-app-nine.vercel.app/",
   },
   {
-    id: 8,
     title: "Spotify Clone",
     description:
       "This website gives a little bit feel of spotify where we have some set of songs which you can play and have fun. Some of the functionalities include pausing and starting from any point, and it will automatically run next song when one ends, if no interruption in between",
@@ -96,7 +96,6 @@ const projectsData = [
     previewUrl: "https://subhajit100.github.io/Spotify_clone/",
   },
   {
-    id: 9,
     title: "Tic Tac Toe Game",
     description:
       "This is very famous game which consists of 3*3 grid and players are allowed to play alternatively with 'X' or '0'. They will be able to see animations on game end or draw.",
@@ -107,7 +106,6 @@ const projectsData = [
       "https://subhajit100.github.io/Tic_Tac_Toe_Better_CSS_Responsive/",
   },
   {
-    id: 10,
     title: "TextUtils Web App",
     description:
       "This app helps to change the collection of text to some different form. It can be converting letters to uppercase, or lowercase or capitalized format. This will also tell you the number of words entered and the average time to read that text",
@@ -117,7 +115,6 @@ const projectsData = [
     previewUrl: "https://subhajit100.github.io/TextUtils_React/",
   },
   {
-    id: 11,
     title: "Flipkart Clone (Frontend)",
     description:
       "This app looks like Flipkart on look and feel, where we have some set of images of different category of products like electronic gadgets, sports equipments and vacation trips.",
@@ -128,7 +125,6 @@ const projectsData = [
       "https://subhajit100.github.io/Flipkart_clone_website_only_style/",
   },
   {
-    id: 12,
     title: "Todo App",
     description:
       " Seamless Drag and Drop option between active and completed tasks",
@@ -139,7 +135,6 @@ const projectsData = [
     previewUrl: "https://subhajit-web-masters-todo.netlify.app/",
   },
   {
-    id: 13,
     title: "Uber App Clone",
     description:
       "This uses React Native 📱 powered by Expo Router & Google Maps API 🗺️ for directions, search autocomplete, places, and distance calculations.",
@@ -200,7 +195,7 @@ const ProjectsSection = () => {
             transition={{ duration: 0.3, delay: index * 0.4 }}
           >
             <ProjectCard
-              key={project.id}
+              key={project.index+project.title}
               title={project.title}
               description={project.description}
               imgUrl={project.image}

@@ -5,24 +5,29 @@ import TabButton from "./TabButton";
 import Link from "next/link";
 
 const skillsList = [
+  "Java",
+  "Spring boot",
   "React.js",
-  "Next.js",
+  "Design Patterns",
+  "LLD + HLD",
   "Node.js",
-  "Python",
-  "Express.js",
-  "Django",
+  "Microservices",
+  "Spring security",
+  "JPA",
   "Docker",
-  "MongoDB",
-  "Javascript",
-  "HTML",
-  "CSS",
-  "Github",
+  "Mockito",
   "MySQL",
+  "Javascript",
+  "Github",
   "Jest",
   "React Testing Library",
 ];
 
 const certificateList = [
+  {
+    url: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-a404c6c8-788b-456e-9ce4-42cc8dbbd4e6.pdf",
+    name: "Java Spring boot",
+  },
   {
     url: "https://cutshort.io/certificate/90327",
     name: "Javascript-Advanced",
@@ -34,11 +39,7 @@ const certificateList = [
   {
     url: "https://cutshort.io/certificate/90053",
     name: "HTML/CSS Certified",
-  },
-  {
-    url: "https://cutshort.io/certificate/90046",
-    name: "React Native Certified",
-  },
+  }
 ];
 
 const TAB_DATA = [
@@ -104,10 +105,7 @@ const AboutSection = () => {
           <p className="text-base lg:text-lg">
             I am a full stack developer with a passion for creating
             interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, Python, Django,
-            MySQL, Docker and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I have a growth mindset and
-            I am excited to work with others to create amazing applications.
+            working with Java, Spring boot, Microservices, JavaScript, React, Node.js, Express, MySQL, Docker, AWS and Git. I am a quick learner and I am always looking to expand my knowledge and skill set. I have a growth mindset and I am excited to work with others to create amazing applications.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton

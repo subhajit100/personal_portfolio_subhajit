@@ -27,12 +27,10 @@ const HeroSection = () => {
                 1000,
                 "Full Stack Developer",
                 1000,
-                "NodeJs Developer",
+                "Java Spring boot developer",
                 1000,
-                "Python Django Developer",
-                1000,
-                "MERN Stack Developer",
-                1000,
+                "Reactjs developer",
+                1000
               ]}
               wrapper="span"
               speed={50}
@@ -41,7 +39,7 @@ const HeroSection = () => {
             </div>
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          Passionate MERN stack developer with a knack for problem-solving, crafting mobile and web applications that mirror the provided design with precision.
+          Passionate full stack Java Spring boot and React developer with a knack for problem-solving, crafting mobile and web applications that mirror the provided design with precision. Good with LLD and HLD desings with hands on experience with microservices architecture.
           </p>
           <div>
             <Link
