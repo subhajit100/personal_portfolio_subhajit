@@ -39,7 +39,7 @@ const HeroSection = () => {
             </div>
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          Passionate full stack Java Spring boot and React developer with a knack for problem-solving, crafting mobile and web applications that mirror the provided design with precision. Good with LLD and HLD desings with hands on experience with microservices architecture.
+          Passionate full stack Java Spring boot and React developer with a knack for problem-solving, crafting mobile and web applications that mirror the provided design with precision. Good with LLD and HLD desings with hands on experience in microservices architecture.
           </p>
           <div>
             <Link
